@@ -20,3 +20,35 @@ p1 -> link = p2;
 
 free(p1);
 free(p2);
+
+-------------------------------------------------------------------------------------------------
+//연결 리스트
+
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct listNode{
+  int data;
+  struct listNode *next;
+}listNode;
+
+int main(){
+  listNode *first = NULL;
+  listNode *second;
+
+  first = (listNode *)malloc(sizeof(listNode));
+  first -> data = 10;
+  first -> next = NULL;
+
+  second = (listNode *)malloc(sizeof(listNode));
+  second -> data = 20;
+  second -> next = NULL;
+  first -> next = second;
+
+  printf("%d %d", first->data, first->next->data);
+  return 0;
+}
+
+-------------------------------------------------------------------------------------------------
+//이중 연결 리스트
+
