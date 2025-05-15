@@ -41,3 +41,12 @@ void queueFull(){
     queue = newQueue;
   }
 }
+-------------------------------------------------------------------------------------------------
+//2차원 배열 동적 할당
+//row와 column은 2차원 배열의 열의 개수와 행의 개수
+
+int **image = (int **)malloc(row * sizeof(int *));
+
+for(int i=0; i<row; i++){
+  image[i] = (int *)malloc(column * sizeof(int));
+}
