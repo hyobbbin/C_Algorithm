@@ -22,3 +22,19 @@ void push(element item){
 element pop(){
 	return stack[top--];
 }
+
+-------------------------------------------------------------------------------------------
+//2개 이상의 스택이 필요한 경우
+typedef struct Stack{
+	element stack[MAX_STACK_SIZE];
+	int top;
+} Stack;
+
+Stack s1, s2;
+
+push(&s1, val);
+// Stack s1에 push
+// 구조체의 내용이 변경되므로, call-by-reference로 호출하여야 함.
+
+val = pop(&s2);
+// Stack s2에서 pop
